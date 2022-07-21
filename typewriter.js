@@ -9,9 +9,10 @@ const quotesArray = [
   'Who is the more foolish: the fool or the fool who follows him?',
   'Your focus determines your reality.', 'The ability to speak does not make you intelligent.', 'Many of the truths that we cling to depend on our viewpoint.', 'I like firsts. Good or bad, they are always memorable.', 'In my experience, there is no such thing as luck.', 'A friendly piece of advice; assume that I know everything.'];
 
-let quoteNumber = Math.floor((Math.random() * 1) + quotesArray.length);
+let quoteNumber = Math.floor((Math.random() * quotesArray.length) + 1);
 
-const sentence = "hello there from lighthouse labs";
+//const sentence = "hello there from lighthouse labs";
+const sentence = quotesArray[quoteNumber];
 
 const outputSentence = conColorGreen + sentence + conColorReset + '\n';  // Fix the new line "bug".
 
