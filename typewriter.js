@@ -1,7 +1,8 @@
 //
 // typewriter.js
 // https://flex-web.compass.lighthouselabs.ca/workbooks/flex-m01w4/activities/387?journey_step=32&workbook=7
-// 
+// 2022-07-20
+//
 
 const conColorGreen = '\x1b[92m', conColorReset = "\x1b[0m";
 
@@ -14,12 +15,12 @@ let quoteNumber = Math.floor((Math.random() * quotesArray.length) + 1);
 //const sentence = "hello there from lighthouse labs";
 const sentence = quotesArray[quoteNumber];
 
-const outputSentence = conColorGreen + sentence + conColorReset + '\n';  // Fix the new line "bug".
+const outputSentence = conColorGreen + sentence + conColorReset + '\n';  // Fix the new line "bug" with \n
 
 let timer = 50, timerIncrement = 50;
 for (const char of outputSentence) {
   let counter=1;
-  let timerIncrement = Math.floor((Math.random() * 180) + 45);
+  let timerIncrement = Math.floor((Math.random() * 170) + 35); // simulate a 'slow-ish' typer with these numbers
   setTimeout(() => {
     process.stdout.write(`${char}`);
   }, timer);
